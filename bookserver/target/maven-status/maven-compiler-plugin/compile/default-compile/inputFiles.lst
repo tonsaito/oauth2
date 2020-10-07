@@ -1,0 +1,15 @@
+/Users/tonsaito/workspace/github/oauth2/bookserver/src/main/java/br/com/casadocodigo/usuarios/Usuario.java
+/Users/tonsaito/workspace/github/oauth2/bookserver/src/main/java/br/com/casadocodigo/configuracao/web/ConfiguracaoMvc.java
+/Users/tonsaito/workspace/github/oauth2/bookserver/src/main/java/br/com/casadocodigo/livros/api/LivrosApiController.java
+/Users/tonsaito/workspace/github/oauth2/bookserver/src/main/java/br/com/casadocodigo/configuracao/seguranca/DadosDoUsuarioService.java
+/Users/tonsaito/workspace/github/oauth2/bookserver/src/main/java/br/com/casadocodigo/livros/Estante.java
+/Users/tonsaito/workspace/github/oauth2/bookserver/src/main/java/br/com/casadocodigo/livros/Livro.java
+/Users/tonsaito/workspace/github/oauth2/bookserver/src/main/java/br/com/casadocodigo/livros/LivrosController.java
+/Users/tonsaito/workspace/github/oauth2/bookserver/src/main/java/br/com/casadocodigo/usuarios/DadosDeRegistro.java
+/Users/tonsaito/workspace/github/oauth2/bookserver/src/main/java/br/com/casadocodigo/configuracao/seguranca/basic/ConfiguracaoDeSeguranca.java
+/Users/tonsaito/workspace/github/oauth2/bookserver/src/main/java/br/com/casadocodigo/usuarios/Credenciais.java
+/Users/tonsaito/workspace/github/oauth2/bookserver/src/main/java/br/com/casadocodigo/BookServerApplication.java
+/Users/tonsaito/workspace/github/oauth2/bookserver/src/main/java/br/com/casadocodigo/configuracao/seguranca/ResourceOwner.java
+/Users/tonsaito/workspace/github/oauth2/bookserver/src/main/java/br/com/casadocodigo/usuarios/UsuariosController.java
+/Users/tonsaito/workspace/github/oauth2/bookserver/src/main/java/br/com/casadocodigo/usuarios/Usuarios.java
+/Users/tonsaito/workspace/github/oauth2/bookserver/src/main/java/br/com/casadocodigo/livros/DadosDoLivro.java
