@@ -9,8 +9,10 @@ import lombok.Getter;
 
 import org.hibernate.validator.constraints.Range;
 
+import java.io.Serializable;
+
 @Entity
-public class Livro {
+public class Livro implements Serializable {
 
 	@Getter
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -1,0 +1,18 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "br.com.casadocodigo.configuracao.database.ConfiguracaoOAuthDB",
+      "name": "spring.ds-bookserver",
+      "sourceMethod": "bookserverDataSource()",
+      "type": "javax.sql.DataSource"
+    },
+    {
+      "sourceType": "br.com.casadocodigo.configuracao.database.ConfiguracaoOAuthDB",
+      "name": "spring.ds-oauth",
+      "sourceMethod": "oauthDataSource()",
+      "type": "javax.sql.DataSource"
+    }
+  ],
+  "properties": []
+}

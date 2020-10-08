@@ -19,7 +19,7 @@ public class ConfiguracaoOAuthDB {
 
     @Primary
     @Bean(name = "dsBookserver")
-    @ConfigurationProperties(prefix = "spring.datasource")
+    @ConfigurationProperties(prefix = "spring.ds-bookserver")
     public DataSource bookserverDataSource() {
         return DataSourceBuilder.create().build();
     }

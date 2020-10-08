@@ -11,13 +11,13 @@ oauth:
 
 ## configurações do datasource do spring
 spring:
-  ds-oauth:
-      url: jdbc:mysql://127.0.0.1:3306/bookserver_oauth
-      username: root
-      password: password
-      driver-class-name: com.mysql.jdbc.Driver
-  datasource:
+  ds-bookserver:
     url: jdbc:mysql://127.0.0.1:3306/bookserver
+    username: root
+    password: password
+    driver-class-name: com.mysql.jdbc.Driver
+  ds-oauth:
+    url: jdbc:mysql://127.0.0.1:3306/bookserver_oauth
     username: root
     password: password
     driver-class-name: com.mysql.jdbc.Driver

@@ -1,5 +1,6 @@
 package br.com.casadocodigo.livros;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
@@ -18,7 +19,7 @@ import lombok.Getter;
 import br.com.casadocodigo.usuarios.Usuario;
 
 @Entity
-public class Estante {
+public class Estante implements Serializable {
 
 	@Getter
 	@Id
