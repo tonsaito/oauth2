@@ -12,8 +12,11 @@ import org.springframework.security.oauth2.config.annotation.web.configurers.Aut
 import org.springframework.security.oauth2.provider.ClientDetailsService;
 import org.springframework.security.oauth2.provider.request.DefaultOAuth2RequestFactory;
 import org.springframework.security.oauth2.provider.token.DefaultTokenServices;
+import org.springframework.security.oauth2.provider.token.TokenEnhancerChain;
 import org.springframework.security.oauth2.provider.token.store.JwtAccessTokenConverter;
 import org.springframework.security.oauth2.provider.token.store.JwtTokenStore;
+
+import java.util.Arrays;
 
 @Configuration
 @EnableAuthorizationServer
@@ -27,6 +30,9 @@ public class AuthorizationServerConfiguration
 
     @Autowired
     private ClientDetailsService clientDetailsService;
+
+    @Autowired
+    private DadosAdicionaisEnhancer tokenEnhancer;
 
     @Bean
     public JwtAccessTokenConverter accessTokenConverter(){
@@ -56,10 +62,14 @@ public class AuthorizationServerConfiguration
 
         requestFactory.setCheckUserScopes(true);
 
+        TokenEnhancerChain tokenEnhancerChain = new TokenEnhancerChain();
+        tokenEnhancerChain.setTokenEnhancers(Arrays.asList(tokenEnhancer, accessTokenConverter()));
+
         endpoints
                 .authenticationManager(authenticationManager)
                 .requestFactory(requestFactory)
                 .tokenStore(jwtTokenStore())
+                .tokenEnhancer(tokenEnhancerChain)
                 .accessTokenConverter(accessTokenConverter());
     }
 
