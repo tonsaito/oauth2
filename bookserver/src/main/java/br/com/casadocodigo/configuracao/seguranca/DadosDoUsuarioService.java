@@ -18,11 +18,11 @@ public class DadosDoUsuarioService implements UserDetailsService {
 	private Usuarios usuarios;
 
 	@Override
-	public UserDetails loadUserByUsername(String email) 
+	public UserDetails loadUserByUsername(String email)
 			throws UsernameNotFoundException {
 
 		Optional<Usuario> usuario = usuarios.buscarPorEmail(email);
-		
+
 		if (usuario.isPresent()) {
 			return new ResourceOwner(usuario.get());
 		} else {

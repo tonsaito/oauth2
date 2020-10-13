@@ -16,16 +16,16 @@ public class ResourceOwner implements UserDetails {
 
 	private Usuario usuario;
 
-
 	public ResourceOwner(Usuario usuario) {
 		this.usuario = usuario;
 	}
 
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {
-		List<SimpleGrantedAuthority> roles  = new ArrayList<>();
+		List<SimpleGrantedAuthority> roles = new ArrayList<>();
 		roles.add(new SimpleGrantedAuthority("ROLE_USUARIO_COMUM"));
 		roles.add(new SimpleGrantedAuthority("read"));
+
 		return roles;
 	}
 

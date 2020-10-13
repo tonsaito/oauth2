@@ -4,9 +4,11 @@ import java.net.URI;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.RequestEntity;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.oauth2.client.OAuth2RestTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
@@ -18,7 +20,20 @@ import br.com.casadocodigo.integracao.model.Livro;
 @Service
 public class BookserverService {
 
+    @Autowired
+    OAuth2RestTemplate oAuth2RestTemplate;
+
     public List<Livro> livros(String token) throws UsuarioSemAutorizacaoException {
+        String endpoint = "http://localhost:8080/api/v2.livros";
+        try{
+            Livro[] livros = oAuth2RestTemplate.getForObject(endpoint, Livro[].class);
+            return listaFromArray(livros);
+        } catch (HttpClientErrorException e){
+            throw new UsuarioSemAutorizacaoException("não foi possível obter os livros do usuário");
+        }
+    }
+
+    public List<Livro> livrosManual(String token) throws UsuarioSemAutorizacaoException {
         RestTemplate restTemplate = new RestTemplate();
 
         MultiValueMap<String, String> headers = new LinkedMultiValueMap<>();
